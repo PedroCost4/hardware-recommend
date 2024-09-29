@@ -1,0 +1,17 @@
+framework: crewai
+topic: extract model pricing from websites
+roles:
+  web_scraper:
+    backstory: An expert in web scraping with a deep understanding of extracting structured
+      data from online sources. https://kabum.com.br/ https://www.pichau.com.br/ https://www.terabyteshop.com.br/ https://www.amazon.com.br/h
+    goal: Gather pricing information for various models from different websites.
+    role: Web Scraper
+    tasks:
+      scrape_computer_hardware_prices:
+        description: Scrape computer hardware prices from different websites.
+        input: None
+        output: None
+        tool: ModelFeeTool
+    tools:
+    - 'ModelFeeTool'
+dependencies: []
