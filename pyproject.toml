@@ -5,6 +5,7 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "croniter>=3.0.3",
     "llama-index-embeddings-huggingface>=0.3.1",
     "llama-index-readers-web>=0.2.3",
     "llama-index>=0.11.14",

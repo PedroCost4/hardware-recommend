@@ -197,6 +197,19 @@ wheels = [
 ]
 
 [[package]]
+name = "croniter"
+version = "3.0.3"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "python-dateutil" },
+    { name = "pytz" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/44/7a/14b0b14ab0203e2c79493cf487829dc294d5c44bedc810ab2f4a97fc9ff4/croniter-3.0.3.tar.gz", hash = "sha256:34117ec1741f10a7bd0ec3ad7d8f0eb8fa457a2feb9be32e6a2250e158957668", size = 53088 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/93/6a/f2f68e0f9cf702b6d055ab53cab0d8c100f04e86228ca500a8ca9de94b58/croniter-3.0.3-py2.py3-none-any.whl", hash = "sha256:b3bd11f270dc54ccd1f2397b813436015a86d30ffc5a7a9438eec1ed916f2101", size = 22422 },
+]
+
+[[package]]
 name = "cssselect"
 version = "1.2.0"
 source = { registry = "https://pypi.org/simple" }
@@ -1190,6 +1203,7 @@ name = "pln"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
+    { name = "croniter" },
     { name = "llama-index" },
     { name = "llama-index-embeddings-huggingface" },
     { name = "llama-index-readers-web" },
@@ -1201,6 +1215,7 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
+    { name = "croniter", specifier = ">=3.0.3" },
     { name = "llama-index", specifier = ">=0.11.14" },
     { name = "llama-index-embeddings-huggingface", specifier = ">=0.3.1" },
     { name = "llama-index-readers-web", specifier = ">=0.2.3" },

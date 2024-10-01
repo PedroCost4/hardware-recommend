@@ -15,19 +15,15 @@ def config_database():
 
 def main():
     config_database()
-    
     conn = sqlite3.connect('database.db')
     c = conn.cursor()
-    
-    print("")
-    userName = input("Digite seu nome: ")
-    userEmail = input("Digite seu email: ")
-    prompt = input("Digite o prompt: ")
-
+    userName = input("Your name: ")
+    userEmail = input("Your email: ")
+    prompt = input("Your prompt: ")
     c.execute("INSERT INTO prompts (prompt, user_email, user_name) VALUES (?, ?, ?)", (prompt, userEmail, userName))
     conn.commit()
-    
-    run_prompt(prompt)
+    final_result =run_prompt(prompt)
+    print(final_result)
 
   
   
